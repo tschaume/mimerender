@@ -5,7 +5,8 @@ from setuptools import setup
 
 setup(
     name="mimerender-pr36",
-    version="0.6.1",
+    use_scm_version=True,
+    setup_requires=["setuptools_scm"],
     description="RESTful HTTP Content Negotiation for Flask, Bottle, web.py "
     "and webapp2 (Google App Engine)",
     author="Martin Blech",
@@ -14,6 +15,7 @@ setup(
     maintainer_email="phuck@lbl.gov",
     url="https://github.com/martinblech/mimerender",
     license="MIT",
+    zip_safe=False,
     long_description="""Fork for https://github.com/martinblech/mimerender/pull/36.
     This module provides a decorator that wraps a HTTP
     request handler to select the correct render function for a given HTTP
